@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div style="font-size: 32px; color: white;"><b>LifeFactors</b></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('diabeteshome') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('hearthome') }}">Heart</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <div class="main-content">
+        <div class="left-column">
+        <h4> Diabetes Prediction </h4>
+        <div class="form-container">
+        <form method="POST" action="/predictdiabetes" class="form">
+                <br><br>
+                Age:
+                <input type="number" name="age" min="0" max="110" placeholder="Enter Age" required>
+                <br><br>
+                High Blood Pressure (Do you have High Blood Pressure?):
+                <select name="highbp">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                High Cholesterol (Do you have High Cholesterol):
+                <select name="highchol">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Have you Checked Cholesterol (within Last 5 Years):
+                <select name="cholcheck">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Enter your height in cm:
+                <input type="number" name="Height" step="0.01" placeholder="Enter Height" required>
+                <br><br>
+                Enter your weight in kg:
+                <input type="number" name="Weight" step="0.01" placeholder="Enter Weight" required>
+                <br><br>
+                Have you smoked more than 10 to 15 packets of cigarettes in your lifetime?:
+                <select name="smoker">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Have you ever had a stroke:
+                <select name="stroke">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Have you ever had a Heart Disease or Heart Attack:
+                <select name="heartdisease">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Do you indulge in Physical Activity apart from your job? (sedentary):
+                <select name="physactivity">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Do you consume vegetables at least once a day:
+                <select name="veggies">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Do you have Heavy Alcohol Consumption:
+                more than 14 standard drinks per week if youre a MALE
+                more than 7 standard drinks per week if youre a FEMALE
+                <select name="hvalcohol">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Rate your own General Health:
+                <select name="genhlth">
+                    <option value="1">Excellent *****</option>
+                    <option value="2">Very Good ****</option>
+                    <option value="3">Good ***</option>
+                    <option value="4">Fair **</option>
+                    <option value="5">Poor *</option>
+                </select>
+                <br><br>
+                <br><br>
+                <label for="menthlth">How many days in the past 30 days do you think you have had poor mental health?</label>
+                <input type="number" name="menthlth" min="0" max="30" placeholder="Enter the number of days" required>
+                <br><br>
+                Physical Health: (In the past 30 days, have you been doing physical activity?
+                Not including your SEDENTARY job?)
+                <input type="number" name="physhlth" min="0" max="30" placeholder="Enter Physical Health" required>
+                <br><br>
+                Do you have mild to serious Difficulty Walking:
+                <select name="diffwalk">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                Enter your Education:
+                <select name="education">
+                    <option value="1">Never attended school or only kindergarten</option>
+                    <option value="2">Attended Elementary</option>
+                    <option value="3">Attended High School</option>
+                    <option value="4">Attended College, no degree</option>
+                    <option value="5">Bachelors Degree</option>
+                    <option value="6">Advanced Degree</option>
+                </select>
+                <br><br>
+                Enter your Income:
+                <input type="number" name="income" placeholder="Enter Income" required>
+            <br><br>
+            <a href="{{ url_for('predict_diabetes') }}"><button class="diabetes-button">Predict</button></a>
+        </form>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; Senior Project I. All rights reserved BrownMonday.</p>
+    </footer>
+
+</body>
+</html>

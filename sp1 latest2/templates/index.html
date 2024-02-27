@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Factors</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <header>
+        <div style="font-size: 32px; color: white;"><b>LifeFactors</b></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('diabeteshome') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('hearthome') }}">Heart</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="main-content">
+        <div class="left-column">
+            <h2>Welcome to</h2>
+            <h1><b>LifeFactors</b></h1>
+            <p>This Senior Project 1 investigates machine learning algorithms for predicting heart disease and diabetes. Through rigorous analysis, the project identifies the most effective algorithm for early detection. Findings offer valuable insights into leveraging machine learning for proactive healthcare management.</p>
+            <div class="button-container">
+                <a href="{{ url_for('diabeteshome') }}"><button class="diabetes-button">Diabetes</button></a>
+                <a href="{{ url_for('hearthome') }}"><button class="diabetes-button">Heart</button></a>
+            </div>
+        </div>
+        
+        <div class="right-column">
+            <img src="{{ url_for('static', filename='images/homepagephoto.png') }}" alt="Home Image">
+
+        </div>
+    </div>
+    
+
+
+    <footer class="footer-index">
+        <p>&copy; Senior Project I. All rights reserved BrownMonday.</p>
+    </footer>
+
+
+</body>
+</html>

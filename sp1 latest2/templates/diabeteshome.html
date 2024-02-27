@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Factors</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div style="font-size: 32px; color: white;"><b>LifeFactors</b></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('diabeteshome') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('hearthome') }}">Heart</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-container">
+        <div class="section-content">
+            <h5 class="section-title">
+                <span class="bold-text">537 million</span> adults (20-79 years) are living with diabetes - 
+                <span class="highlighted-text">1 in 10</span>.
+            </h5>            
+          <div class="statistic-list">
+            <div class="statistic-item">
+              <h3 class="statistic-number">4.2m</h3>
+              <h6 class="statistic-description">Deaths per year</h6>
+            </div>
+            <div class="statistic-item">
+              <h3 class="statistic-number">50%</h3>
+              <h6 class="statistic-description">Undiagnosed adults</h6>
+            </div>
+            <div class="statistic-item">
+              <h3 class="statistic-number">$760b</h3>
+              <h6 class="statistic-description">Global healthcare expenditure</h6>
+            </div>
+            <div class="statistic-item">
+              <h3 class="statistic-number">2</h3>
+              <h6 class="statistic-description">Types</h6>
+            </div>
+          </div>
+        </section>
+          
+    <div class ="diabetesblue">
+
+    <div class="main-content">
+        <div class = 'leftdiab-column'>
+            <h1>Diabetes</h1>
+
+            <div>
+                <p>Diabetes is a chronic health condition characterized by elevated levels of blood glucose, commonly referred to as blood sugar. This occurs when the body either doesn't produce enough insulin or can't effectively use the insulin it produces. Insulin is a hormone that regulates blood sugar and allows it to enter cells to be used for energy.<p>
+            </div>
+           
+        </div>
+        <div class ='rightdiab-column'>
+            <div>
+                <b>What are the symptoms of diabetes?</b>
+                <p>Thirst, frequent urination, and unexplained weight loss.</p>
+            </div>
+            <div>
+                <b>What are the risk factors for diabetes?</b>
+                <p>Obesity, family history, and lack of physical activity.</p>
+            </div>
+            <div>
+                <b>How can diabetes be managed or prevented?</b>
+                <p>Medication, lifestyle changes, and regular monitoring of blood sugar levels.</p>
+            </div>
+        </div>
+    </div>
+        </div>
+
+        <div class="diabetesbuttonspred">
+            <h1>Predict if you are at risk of Diabetes<h1>
+            <a href="{{ url_for('diabetespred') }}"><button class="diabetes-button">Predict</button></a>
+            <div class="attribution">
+                Photo by <a href="https://unsplash.com/@jjying?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">JJ Ying</a> on <a href="https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
+            </div>
+            
+            </div>
+
+        </div>
+    </div>
+      
+      
+
+    <footer>
+        <p>&copy; Senior Project I. All rights reserved BrownMonday.</p>
+    </footer>
+</body>
+</html>

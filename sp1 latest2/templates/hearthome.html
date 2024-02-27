@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Factors</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div style="font-size: 32px; color: white;"><b>LifeFactors</b></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('diabeteshome') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('hearthome') }}">Heart</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section-container">
+        <div class="section-content">
+            <h5 class="section-title">
+                <span class="bold-text">520 million</span> adults are living with heart disease worldwide - 
+                <span class="highlighted-text">1 in 4</span>.
+            </h5>            
+          <div class="statistic-list">
+            <div class="statistic-item">
+              <h3 class="statistic-number">17.9M</h3>
+              <h6 class="statistic-description">Deaths per year</h6>
+            </div>
+            <div class="statistic-item">
+              <h3 class="statistic-number">80%</h3>
+              <h6 class="statistic-description">Deaths Preventable</h6>
+            </div>
+            <div class="statistic-item">
+              <h3 class="statistic-number">$1.2T</h3>
+              <h6 class="statistic-description">Global healthcare expenditure</h6>
+            </div>
+            <div class="statistic-item">
+              <h3 class="statistic-number">50%</h3>
+              <h6 class="statistic-description">Undiagnosed</h6>
+            </div>
+          </div>
+        </section>
+          
+        <div class ="diabetesblue">
+
+            <div class="main-content">
+                <div class = 'leftdiab-column'>
+                    <h1>Heart Disease</h1>
+        
+                    <div>
+                        <p>Heart disease refers to a range of conditions that affect the heart, including coronary artery disease, heart rhythm problems (arrhythmias), and heart defects present at birth (congenital heart defects). It is a leading cause of death worldwide, with various risk factors contributing to its development.<p>
+                    </div>
+                   
+                </div>
+                <div class ='rightdiab-column'>
+                    <div>
+                        <b>What are the symptoms of heart disease?</b>
+                        <p>Chest pain, shortness of breath, and irregular heartbeat.</p>
+                    </div>
+                    <div>
+                        <b>What are the risk factors for heart disease?</b>
+                        <p>High blood pressure, high cholesterol, and smoking.</p>
+                    </div>
+                    <div>
+                        <b>How can heart disease be managed or prevented?</b>
+                        <p>Healthy diet, regular exercise, and avoiding tobacco smoke.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="diabetesbuttonspred">
+            <h1>Predict if you are at risk of Heart Disease<h1>
+                <p>Do you have your blood work?</p>
+                <div class ='space'>
+                <a href="{{ url_for('heartpred') }}"><button class="diabetes-button">No</button></a>
+                <a href="{{ url_for('heartblood') }}"><button class="diabetes-button">Yes</button></a>
+            <div class="attribution">
+                Photo by <a href="https://unsplash.com/@jjying?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">JJ Ying</a> on <a href="https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
+            </div>
+            
+            </div>
+
+        </div>
+    </div>
+      
+      
+
+    <footer>
+        <p>&copy; Senior Project I. All rights reserved BrownMonday.</p>
+    </footer>
+</body>
+</html>

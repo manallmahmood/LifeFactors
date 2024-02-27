@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <div style="font-size: 32px; color: white;"><b>LifeFactors</b></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('diabeteshome') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('hearthome') }}">Heart</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <div class="main-content">
+        <div class="left-column">
+        <h5> Heart Disease Prediction </h5>
+        <div class="form-container">
+        <form method="POST" action="/predictheartblood" class="form">
+                <br><br>
+                Age:
+                <input type="number" name="age" min="0" max="110" placeholder="Enter Age" required>
+                <br><br>
+                Gender at birth:
+                <select name="sex_blood">
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+                <br><br>
+                Do you have Angina:
+                <select name="cp">
+                    <option value="3">Asymptomatic</option>
+                    <option value="0">Typical Angina</option>
+                    <option value="1">Atypical Angina</option>
+                    <option value="2">Non-anginal Pain</option>
+                </select>
+                <br><br>
+                Resting Systolic Blood Pressure:
+                <input type="number" name="trestbps"  min="100" max="200" placeholder="Systolic blood Pressure" required>
+                <br><br>
+                Cholestorol:
+                <input type="number" name="chol"  min="120" max="300" placeholder="Total Cholestorol Level" required>
+                <br><br>
+                Is your fasted Blood Sugar more than 120?:
+                <select name="fbs">
+                    <option value="0">Less than 120</option>
+                    <option value="1">More than 120</option>
+                </select>
+                <br><br>
+                Resting ElectroCardioGraph diagnosis:
+                <select name="restecg">
+                    <option value="0">Normal</option>
+                    <option value="1">ST-T wave abnormality</option>
+                    <option value="2">Probable left ventrivular hyper tension</option>
+                    <option value="2">Definite left ventricle hyper tension</option>
+                </select>
+                <br><br>
+                Maximum Heart Rate during stress test:
+                <input type="number" name="thalach" placeholder="Heart Rate" required>
+                <br><br>
+                Exercise induced Angina:
+                <select name="exang">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <br><br>
+                ST depression induced by exercise relative to rest: :
+                <input type="number" name="oldpeak" placeholder="ST depression number" required>
+                <br><br>
+                Slope of the peak exercise ST segment::
+                <select name="slope">
+                    <option value="0">Upsloping</option>
+                    <option value="1">Flat</option>
+                    <option value="2">Downsloping</option>
+                </select>
+                <br><br>
+                Number of major blood vessels colored by flouroscopy:
+                <select name="ca">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <br><br>
+                Stress test diagnosis:
+                <select name="thal">
+                    <option value="0">Normal</option>
+                    <option value="2">Reversible Defect</option>
+                    <option value="1">Fixed Defect</option>
+                    <option value="3">Not Described</option>
+                </select>
+                <br><br>
+               
+            <br><br>
+            <a href="{{ url_for('predict_heartblood') }}"><button class="diabetes-button">Predict</button></a>
+        </form>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; Senior Project I. All rights reserved BrownMonday.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,725 @@
+/* Resetting default margin and padding */
+body, h1, p, a, input, select, option {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Change font */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(180deg, #0576bf, #005a9c); /* Gradient background */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Add position relative for pseudo-element */
+}
+
+/* Navigation styles */
+nav {
+    background-color: transparent; /* Updated background color */
+    text-align: right;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+nav ul li:first-child {
+    margin-left: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Set text color to white */
+}
+
+/* Main content area styles */
+.main-content {
+    margin: 50px;
+    display: flex;
+    justify-content: center; /* Center main content */
+}
+
+/* Left column styles */
+.left-column {
+    width: 60%;
+    padding-right: 100px;
+    padding-left: 90px;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+.left-column h2 {
+    font-size: 36px; /* Decrease font size */
+    color: #014c8a; /* Set text color to white */
+    text-align: left; /* Align text to the left */
+    font-family: Arial, sans-serif; /* Change font */
+    font-weight: 500; /* Increase thickness */
+    margin-bottom: -10px; /* Add space below heading */
+}
+
+.left-column h1 {
+    font-size: 52px; /* Increase font size */
+    color: #014c8a; /* Set text color to white */
+    font-weight: bold; /* Make text bold */
+    text-align: left; /* Align text to the left */
+    font-family: Arial, sans-serif; /* Change font */
+    margin-bottom: 20px; /* Add space below heading */
+}
+
+.left-column p {
+    font-size: 18px; /* Increase font size */
+    text-align: justify; /* Justify text */
+    font-family: Arial, sans-serif; /* Change font */
+    margin-top: -5px;
+    color: black; /* Set text color to black */
+    margin-bottom: 20px; /* Add space below paragraph */
+}
+
+
+/* Right column styles */
+.right-column {
+    width: 60%;
+    
+}
+
+.diabetes-button,
+form input[type="submit"] {
+    background-color: #f9f9f9; /* Set button background color */
+    color: #005a9c; /* Set text color */
+    padding: 10px 20px; /* Add padding */
+    border: 1px solid #393939; /* Add border */
+    border-radius: 9px; /* Add rounded corners */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transition */
+    margin-right: 10px; /* Add margin between buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+.heart-button,
+form input[type="submit"] {
+    background-color: #f9f9f9; /* Set button background color */
+    color: #005a9c; /* Set text color */
+    padding: 10px 20px; /* Add padding */
+    border: 1px solid #393939; /* Add border */
+    border-radius: 9px; /* Add rounded corners */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transition */
+    margin-right: 10px; /* Add margin between buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.diabetes-button:hover,
+.heart-button:hover,
+form input[type="submit"]:hover {
+    background-color: #014c8a; /* Change background color on hover */
+    border-color: #393939; /* Change border color on hover */
+    color: white;
+}
+
+/* Second section styles */
+.second-section {
+    margin-top: -10px;
+    position: relative; /* Set position to relative */
+    background: linear-gradient(180deg, #0576bf, #005a9c); /* Gradient background */
+    padding: 50px 0; /* Add padding */
+    text-align: center; /* Center align text */
+    color: white; /* Set text color to white */
+    overflow: hidden; /* Hide overflow */
+}
+
+/* Add a pseudo-element for the shape divider */
+.second-section:before {
+    margin-top: -10px;
+    content: '';
+    position: absolute;
+    top: -50px; /* Adjust the position as needed */
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjust the height of the shape */
+    clip-path: url(#wave-shape); /* Reference to the SVG clip-path */
+    background: linear-gradient(180deg, #005a9c, #0576bf); /* Match the footer's background */
+    z-index: -1; /* Move the wave behind the content */
+}
+
+/* SVG clip-path for the wave shape */
+svg.clip-svg {
+    position: absolute;
+    width: 100%; /* Adjust to cover the entire section */
+    height: 100%; /* Adjust to cover the entire section */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    z-index: -1; /* Move the SVG behind the content */
+    pointer-events: none; /* Make the SVG non-interactive */
+}
+
+
+
+/* Photo styles */
+.photo {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+}
+
+.photo img {
+    width: 180px; /* Set the width of each image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add margin between images */
+}
+
+/* Text styles */
+.text h3 {
+    font-size: 32px; /* Set font size */
+    margin-bottom: 10px; /* Add margin */
+    
+}
+
+.left-column h4 {
+    font-size: 42px; /* Adjust font size */
+    color: #333; /* Set text color */
+    margin-top: 50px; /* Adjust margin */
+    align-items: center;
+    font-weight: 800;
+    margin-left: 175px;
+}
+
+.left-column h5 {
+    font-size: 42px; /* Adjust font size */
+    color: #333; /* Set text color */
+    margin-top: 50px; /* Adjust margin */
+    align-items: center;
+    font-weight: 800;
+    margin-left: 127px;
+}
+
+
+
+.text p {
+    font-size: 18px; /* Set font size */
+    padding-top: 20px;
+    padding-left: 250px;
+    padding-right: 250px;
+    
+}
+
+/* Form container styles */
+.form-container {
+    border: 1px solid #a6a6a6; /* Add border */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 30px; /* Add padding */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+    width: 700px;
+    align-items: center;
+    margin-top: -40px;
+}
+
+/* Form styles */
+.pred-content {
+    margin: 50px auto; /* Center the content horizontally */
+    max-width: 600px; /* Set maximum width for the content */
+    padding: 50px; /* Add padding */
+    background-color: #f2f2f2; /* Set background color */
+    border-radius: 10px; /* Add rounded corners */
+    border: 2px solid #0576bf; /* Add border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+}
+
+/* Form field styles */
+form input[type="number"],
+form select {
+    width: calc(100% - 22px); /* Adjust width to accommodate borders */
+    height: 40px;
+    padding: 15px; /* Add padding */
+    margin: 10px 0; /* Add margin */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+form input[type="submit"] {
+    background-color: #0576bf; /* Set button background color */
+    color: white; /* Set text color to white */
+    padding: 15px 30px; /* Add padding */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 18px; /* Adjust font size */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+form input[type="submit"]:hover {
+    background-color: #005a9c; /* Change background color on hover */
+}
+
+.section-container {
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/diabetesbg.jpg');
+    background-size: cover;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    z-index: -1;
+}
+
+
+  
+  .section-content {
+    min-height: 696px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* Section title styles */
+.section-title {
+    font-size: 36px; /* Set default font size */
+    width: 800px;
+    font-weight: 400;
+    margin-bottom: -20px;
+    padding-left: 42px;
+    text-align: center;
+}
+
+/* Target the '537 million' part */
+.section-title span.bold-text {
+    font-weight: bold;
+    font-size: 48px; /* Increase font size */
+    color: #005a9c;
+}
+
+/* Target the '1 in 10' part */
+.section-title span.highlighted-text {
+    font-weight: bold;
+    font-size: 48px; /* Increase font size */
+    color: #005a9c;
+}
+
+  
+  .highlighted-text {
+    color: #000; /* You can change the color as needed */
+  }
+  
+  .statistic-list {
+    width: 800px;
+    margin: 20px auto -56px auto;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 5px));
+    grid-gap: 10px;
+    padding-top: 20px;
+    padding-left:45px;
+    
+
+
+  }
+  
+  .statistic-item {
+    background: linear-gradient(180deg, #0576bf, #005a9c); /* Gradient background */
+    padding: 20px;
+    text-align: left;
+    padding-left: 55px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(60, 60, 60, 0.1); /* Add shadow */
+  }
+  
+  .statistic-number {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 20px 0 0 0;
+    color: #ffffff;
+  }
+  
+  .statistic-description {
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+    font-weight: 400;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+
+
+.diabetesblue {
+    background: linear-gradient(180deg, #0576bf, #005a9c); /* Gradient background */
+    padding: 30px;
+}
+
+.leftdiab-column, .rightdiab-column {
+    width: 50%;
+    color: white;
+    padding: 30px;
+    text-align: justify;
+}
+.leftdiab-column {
+    padding-right: 80px;
+}
+.rightdiab-column div {
+    margin-bottom: 20px; /* Add space between each alternation */
+}
+
+.left-column h1 {
+    margin-bottom: 20px;
+}
+
+.diabetesblue h1 {
+    font-size: 48px; /* Adjust font size */
+    margin-bottom: 20px; /* Add space below heading */
+}
+
+.diabetesblue p {
+    font-size: 18px; /* Adjust font size */
+    line-height: 1.6; /* Set line height for better readability */
+}
+
+.diabetesblue b {
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Adjust font size */
+}
+
+.diabetesbuttonspred {
+    position: relative;
+    padding: 50px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
+    font-weight: 500;
+    height: 100%; /* Ensure the section takes up the full height */
+    padding-top: 100px;
+}
+
+.diabetesbuttonspred::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/diabetesbg.jpg');
+    background-size: cover;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    z-index: -1;
+    padding-bottom: 20px;
+
+}
+
+.diabetesbuttonspred p{
+    font-weight: 400;
+    font-size: 28px;
+
+}
+.space {
+    margin: 15px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(2, 2, 2);
+    font-size: 10px;
+}
+
+.current-section {
+    position: relative; /* Add position relative */
+    height: 85vh; /* Adjust the height */
+    background-image: linear-gradient( #0a6bb1, #0576bf), url('/static/images/bluesplash.jpg'); /* Add background image with opacity */
+    background-size: cover; /* Adjust background size */
+}
+
+.current-section::before {
+    content: ""; /* Add empty content */
+    position: absolute; /* Position absolutely */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: url('/static/images/bluesplash.jpg') center/cover no-repeat; /* Background image */
+    opacity: 0.2; /* Adjust opacity as needed */
+}
+
+.u-container-style {
+    position: relative; /* Add position relative */
+    z-index: 1; /* Ensure content appears above the background */
+    width: 596px;
+    min-height: 507px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    align-content: center;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+
+.u-sheet {
+    min-height: 848px;
+}
+
+.u-container-style {
+    width: 596px;
+    min-height: 507px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    align-content: center;
+    padding-left: 280px;
+    padding-right: 250px;
+    
+}
+
+.u-image {
+    width: 180px;
+    height: 180px;
+    margin-top: 110px;
+    margin-bottom: 0;
+    margin-left: 75px;
+    margin-right: auto;
+
+}
+
+.u-text {
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    font-size: 42px;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Change font */
+    color:white;
+}
+
+.u-textsmall {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Change font */
+    font-weight: lighter;
+    color:white;
+
+}
+
+.u-text a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.u-layout-row {
+    display: flex;
+}
+
+.u-layout-cell {
+    min-height: 125px;
+    padding: 30px 14px;
+}
+
+.team-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Stretch items to match height */
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.team-section0 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Stretch items to match height */
+    margin-top: 20px;
+    padding-bottom: 0;
+}
+
+
+.team-member {
+    background: linear-gradient(180deg, #0576bf, #005a9c);
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(60, 60, 60, 0.1);
+    margin: 0 10px; /* Add spacing between team members */
+    width: 180px; /* Adjust width of each team member */
+}
+
+.team-member img {
+    width: 100px; /* Adjust image size */
+    border-radius: 50%; /* Make image round */
+}
+
+.team-member h3, .team-member p {
+    color: white;
+    margin: 10px 0;
+}
+
+.team-section h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-family: Arial, sans-serif; /* Change font */
+}
+
+.team-section0 h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-family: Arial, sans-serif; /* Change font */
+}
+
+.two-column-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            padding: 80px;
+            padding-top: 30px;
+        }
+        .column img {
+            width: 100%;
+            height: auto;
+        }
+
+/* Footer styles */
+footer {
+    background: linear-gradient(180deg, #005a9c, #0576bf);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Change font */
+    margin-top: 20px; /* Add space above footer */
+}
+
+.containerpred {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Set the height to 100% of the viewport height */
+}
+
+.containerpred h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.containerpred h2,
+.containerpred p,
+.containerpred a {
+    text-align: center; /* Center align text */
+}
+
+.two-column-section .column p {
+    margin-bottom: 90px;
+    margin-right: -50px;
+    text-align: justify;
+}
+
+.containerpred {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Set the height to 100% of the viewport height */
+    padding: 50px;
+}
+
+.containerpred h1 {
+    text-align: center;
+    font-size: 42px; /* Change font size to 42px */
+    color: #000000; /* Change font color */
+}
+
+.containerpred h3 {
+    text-align: center;
+    font-size: 28px; /* Change font size to 42px */
+    color: #000000; /* Change font color */
+    font-weight: bold;
+    
+}
+
+.containerpred h2 {
+    font-size: 24px; /* Change font size to 38px */
+    color: #000000; /* Change font color */
+    font-weight: 500;
+    margin-top: -20px;
+}
+
+.containerpred h4 {
+    font-size: 36px; /* Change font size to 38px */
+    color: #000000; /* Change font color */
+    margin-top: 10px; /* Add some margin to separate from the previous element */
+    font-weight: bold;
+}
+
+.containerpred p {
+    font-size: 18px; /* Set font size for paragraph */
+    text-align: center; /* Center align text */
+    color: #333; /* Set font color */
+    margin-top: 20px; /* Add margin on top */
+}
+
+.containerpred a {
+    text-decoration: none; /* Remove underline */
+    color: #0576bf; /* Set link color */
+    font-weight: bold; /* Make link text bold */
+    margin-top: 20px; /* Add margin on top */
+}
+
+.containerpred a:hover {
+    color: #005a9c; /* Change link color on hover */
+}
+
+.prediction-bg {
+    position: relative;
+}
+
+.prediction-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/diabetesbg.jpg');
+    background-size: cover;
+    opacity: 0.5; /* Adjust the opacity as needed */
+    z-index: -1;
+}
+
+
+footer-index {
+    position: relative; /* Set position to relative */
+    z-index: 1; /* Ensure footer appears above the wave */
+    background: linear-gradient(180deg, #005a9c, #0576bf);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Change font */
+}

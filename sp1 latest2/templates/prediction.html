@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Diabetes Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="prediction-bg">
+    <header>
+        <div style="font-size: 32px; color: white;"><b>LifeFactors</b></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('diabeteshome') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('hearthome') }}">Heart</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="attribution">
+        Photo by <a href="https://unsplash.com/@jjying?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">JJ Ying</a> on <a href="https://unsplash.com/photos/white-and-gray-optical-illusion-7JX0-bfiuxQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
+    </div>
+
+    <div class="containerpred">
+        <h1>Prediction Results</h1>
+        <br>
+        <h3>{{ result }}</h3>
+        <h2>{{ result2 }}</h2>
+        <h4>{{ probability }} % </h4>
+        <p>This is not direct medical advice. Please consult with your doctor.</p>
+        <br>
+        <button class="diabetes-button" onclick="goBack()">Predict Again</button>
+
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        </script>
+        
+    </div>
+
+    
+
+    <footer class="footer-index">
+        <p>&copy; Senior Project I. All rights reserved BrownMonday.</p>
+    </footer>
+</body>
+</html>

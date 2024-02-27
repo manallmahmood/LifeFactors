@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Factors</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div style="font-size: 32px; color: white;"><b>LifeFactors</b></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('diabeteshome') }}">Diabetes</a></li>
+                <li><a href="{{ url_for('hearthome') }}">Heart</a></li>
+                <li><a href="{{ url_for('aboutus') }}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="current-section">
+        <div class="u-clearfix u-sheet">
+            <div class="u-container-style u-group">
+                <div class="u-container-layout">
+                    <img class="u-image" src="{{ url_for('static', filename='images/vms.png') }}" alt="AbacImage">
+                    <img class="u-image" src="{{ url_for('static', filename='images/abac.png') }}" alt="VMS Image">
+                    <h2 class="u-text">Life Factors</h2>
+                    <p class="u-textsmall">
+                        A culmination of a Senior Project I completed at Vincent Mary School of Science and Technology, Assumption University which aims to revolutionize healthcare with advanced data analytics. Focused on predicting diabetes and heart disease, we challenge traditional diagnostic methods involving invasive procedures. Using machine learning algorithms and extensive datasets, we offer personalized risk assessments based on routine blood tests, reducing patient discomfort and healthcare costs. Our approach streamlines diagnosis and provides tailored interventions, representing a significant advancement in healthcare delivery. </p>
+                </div>
+            </div>
+        </div>
+        <div class="attribution">
+            Photo by <a href="https://unsplash.com/@ricvath?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Richard Horvath</a> on <a href="https://unsplash.com/photos/blue-and-white-heart-illustration-cPccYbPrF-A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
+        </div>
+    </section>
+
+    <!-- "Team Brown Monday" section -->
+    <section class="team-section0">
+        <h1>Team Brown Monday</h1>
+    </section>
+    <section class="team-section0">
+        <p> Advised by: <b> Dr. AnilKumar K. Gopalakrishnan</b></p>
+    </section> 
+
+    <!-- Team members section -->
+    <section class="team-section">
+        <div class="team-member">
+            <img src="team-member1.jpg" alt="Anurag Karki">
+            <h3>Anurag </h3>
+            <h3>Karki</h3>
+            <p>6411318</p>
+        </div>
+        <div class="team-member">
+            <img src="team-member2.jpg" alt="Manal Mahmood">
+            <h3>Manal </h3>
+            <h3>Mahmood </h3>
+            <p>6340044</p>
+        </div>
+        <div class="team-member">
+            <img src="team-member3.jpg" alt="Sanjana Subrahmanya">
+            <h3>Sanjana Subrahmanya</h3>
+            <p>6411242</p>
+        </div>
+    </section>
+
+     <!-- Two-column section -->
+     <section class="two-column-section">
+        <div class="column">
+            <h2>Diabates:</h2>
+            <p>The diabetes prediction project uses a big dataset from the CDC's survey in 2015. This survey asked lots of people about their health and habits. There are two parts to the dataset: one for training and testing (with 254,680 responses), and another for checking the predictions (with 70,692 responses). It has many details like how healthy people feel, their weight, age, habits, and medical history. These details help us understand who might get diabetes.
+
+                To make predictions, we use different computer programs called algorithms. These include Naïve Bayes, Support Vector Machines (SVM), Gradient Boosting, K-Nearest Neighbors (KNN), Logistic Regression, and Random Forest Classifier. Each algorithm looks at the data in its own way to find patterns related to diabetes risk.
+                
+                We also adjust the algorithms' settings to make them work best. This is like fine-tuning a guitar to make the music sound good. By tweaking these settings, we make sure the algorithms give us accurate predictions.
+                
+                The main aim of the project is to predict who might get diabetes based on their lifestyle. By understanding the factors linked to diabetes risk, we hope to help people take steps to stay healthy. Using this data-driven approach, we want to improve healthcare by spotting potential health issues early and giving people advice to stay well.</p>
+            <h2>Heart Disease Prediction Using Heart-Specific Bloodwork:</h2>
+            <p>The heart-specific dataset is tailored to predict myocardial infarction and coronary heart disease based on comprehensive bloodwork parameters. It encompasses features like age, sex, chest pain type, blood pressure, cholesterol levels, ECG results, and more. These factors provide crucial insights into cardiovascular health, aiding in accurate disease prediction.
+
+                Various supervised machine learning algorithms are applied to this dataset, including Decision Trees, Gradient Boosting, Support Vector Machine (SVM), Random Forest Classifier, and Logistic Regression. Each algorithm offers unique advantages in handling the complexity of heart-related data. For instance, Decision Trees excel in identifying key predictors, while Gradient Boosting optimizes model performance through iterative learning. SVM is adept at handling non-linear relationships, while Random Forest Classifier mitigates overfitting by ensemble learning. Logistic Regression, on the other hand, provides interpretable results and is well-suited for binary classification tasks.
+                
+                Hyperparameters for each algorithm are fine-tuned using GridSearchCV to optimize performance and ensure robust predictions. By leveraging these diverse algorithms, the heart disease prediction model can effectively analyze heart-specific bloodwork data and provide valuable insights into cardiovascular health.</p>
+            <h2>Heart Disease Prediction Using Lifestyle:</h2>
+            <p>To evaluate the performance of machine learning algorithms on the heart dataset derived from BFRSS 2020, an accuracy table is constructed. This table provides a comprehensive overview of each algorithm's effectiveness in predicting heart disease.
+
+                Metrics such as accuracy, precision, and confusion matrix analysis are utilized to assess algorithm performance. Accuracy measures the overall correctness of predictions, while precision evaluates the algorithm's ability to correctly identify positive cases (presence of heart disease) and negative cases (absence of heart disease). Confusion matrix analysis further elucidates the distribution of true positives, true negatives, false positives, and false negatives, offering insights into the algorithm's strengths and weaknesses.
+                
+                By scrutinizing the accuracy table, researchers can identify the most effective algorithm for heart disease prediction based on the heart dataset from BFRSS 2020. This facilitates informed decision-making in healthcare and enables proactive management of cardiovascular health.</p>
+        </div>
+        <div class="column">
+            <img src="{{ url_for('static', filename='images/diabetestable.png') }}" alt="diab Image">
+            <img src="{{ url_for('static', filename='images/heart1.png') }}" alt="hearts1 Image">
+            <img src="{{ url_for('static', filename='images/heart2.png') }}" alt="hearts2 Image">
+        </div>
+    </section>
+
+    <footer class="footer-index">
+        <p>&copy; Senior Project I. All rights reserved BrownMonday.</p>
+    </footer>
+</body>
+</html>
