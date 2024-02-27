@@ -43,7 +43,6 @@ Bottleneck @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs
 Brotli @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_01vdzesc6m/croots/recipe/brotli-split_1659616063272/work
 cachetools @ file:///tmp/build/80754af9/cachetools_1619597386817/work
 Cartopy @ file:///opt/concourse/worker/volumes/live/25a39af7-6904-4ccd-6acb-63ce37e0cb46/volume/cartopy_1612289802100/work
-certifi @ file:///private/var/folders/c_/qfmhj66j0tn016nkx_th4hxm0000gp/T/abs_dfez5lkpj0/croot/certifi_1707229180975/work/certifi
 cffi @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_44mvycfmuf/croot/cffi_1700254431144/work
 chardet @ file:///opt/concourse/worker/volumes/live/c798b2ee-88b1-4341-6830-161a92c2399e/volume/chardet_1607706832595/work
 charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
